@@ -27,7 +27,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-6" style="text-align: left; font-size: 22px; font-weight: 500;">이용약관 동의</div>
-		<div class="col-6" style="text-align: right;"> <input type="checkbox" value="Y" name="agrre1" id="arrg1">약관을 충분히 이해하였으며 동의 합니다.(필수)</div>
+		<div class="col-6" style="text-align: right;"> <input type="checkbox" value="Y" name="agrre1" id="arrg1"><label for="arrg1">약관을 충분히 이해하였으며 동의 합니다.(필수)</label></div>
 	</div>
 </div>
 
@@ -57,7 +57,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-6" style="align-items: flex-start;">이용약관 동의</div>
-		<div class="col-6" style="text-align: right;"><input type="checkbox" value="Y" name="agrre2" id="arrg2" class="agg2">약관을 충분히 이해하였으며 동의 합니다.(필수)</div>
+		<div class="col-6" style="text-align: right;"><input type="checkbox" value="Y" name="agrre2" id="arrg2" class="agg2"><label for="arrg2">약관을 충분히 이해하였으며 동의 합니다.(필수)</label></div>
 	</div>
 </div>
 </section>
@@ -94,7 +94,7 @@ function chak() {
 		alert("이용약관에 동의 해주세요");
 		return;
 	}else{
-		location.href='Board_call';
+		location.href='Sign_up_go';
 	}	
 	
         

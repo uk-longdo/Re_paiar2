@@ -4,4 +4,29 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="boot.app">
 
+<insert id="insert_user" parameterType="boot.app.com.dto.user_dto">
+	insert into tb_user values (null, #{user_id},#{user_pw},#{user_name},null,#{user_zipcode},#{user_addr},#{user_addr_dtr},#{user_phone},#{user_email},null,#{user_gender}, #{user_birthday},NULL, NULL, NULL, NULL, NOW(), DEFAULT)
+
+</insert>
+
+<select id="login_te" resultType="Integer">
+SELECT 
+COUNT(*)
+FROM tb_user 
+WHERE user_id = #{user_id} AND user_pw = #{user_pw};
+</select>
+
+<select id="user_info" resultType="Integer">
+SELECT idx
+FROM tb_user
+WHERE user_id = #{user_id} AND user_pw = #{user_pw};
+</select>
+
+
+<select id="name" resultType="String">
+SELECT user_name
+FROM tb_user
+WHERE idx = #{idx}
+</select>
+
 </mapper>
